@@ -1,0 +1,127 @@
+<!DOCtype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="compass.png"/>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.bundle.min.js" defer></script>
+    <script src="jquery-3.6.0.min.js" defer></script>
+     <script src="salaire.js" defer></script> <!--OLD-->
+    <script src="SalaryObject.js" defer></script>
+    <link rel="stylesheet" href="salaire.css">
+    <title>Calcul du salaire selon le statut de la personne</title>
+</head>
+<body>
+
+    <!-- <div id="wrap0"> -->
+	
+<!-- ***************************************************FORMULAIRE********************************************************************* -->
+    
+
+        <!-- <div class="wrap"> -->
+
+    <div class="container bg-info">
+
+        <form id="formSal" class="form-control-lg">
+
+            <table id="tabSal">
+
+
+              <!--   <legend class="font-large">Calculer et convertir votre salaire brut en salaire net</legend> -->
+                <h2 class="h3">Formulaire de calcul de salaires</h2>
+                <fieldset>
+                        <legend>Calculer et convertir votre salaire brut en salaire net</legend>
+                </fieldset>
+
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                  <tr class="salaire">
+                    <td><span>Salaire</span> 
+                    <td class="brutNet"><span class="brut">Brut</span>  <span class="net">Net</span> </td>
+                  </tr>
+            </div>
+            <div class="col-12 col-lg-6">
+                    <tr>
+              <td><span>Annuel</span> 
+              <td><input type="text" id="anBrut" value="00,00 €"  onblur="managerSalary('cadre');"> <input type="text" id="anNet" value="00,00 €" ></td>
+            </tr>
+            </div>
+            <div class="col-12 col-lg-6">
+
+                  <tr>
+              <td><span>Mensuel</span></td>
+              <td><input type="text" id="mensBrut" value="00,00 €" > <input type="text" id="mensNet" value="00,00 €"></td>
+            </tr>
+            </div>
+            <div class="col-12 col-lg-6">
+                  <tr>
+                <td><span>Journalier</span></td>
+                <td><input type="text" id="jourBrut" value="00,00 €" > <input type="text" id="jourNet" value="00,00 €"></td>
+              </tr>
+
+            </div>
+            <div class="col-12 col-lg-6">
+
+                   <tr>
+                <td><span>Horaire</span></td>
+                <td><input type="text" id="horairBrut" value="00,00 €" > <input type="text" id="horairNet" value="00,00 €"></td>
+              </tr>
+
+            </div>
+        </div> <!-- Fin de row -->
+            <!-- <div class="my-5"> -->
+              
+           
+         <!-- </div> -->
+              <!-- --------------------------------------Bas du formulaire----------------------------------------------- -->
+              <!-- ------------------------------------------CTA----------------------------------------------------------- -->
+       
+              <tr class="options">
+                <td class="p-3">Options</td>
+                <td><input class="btn-secondary" type="button" id="smic" value="Appliquer le SMIC" onclick="managerSalary('smic')"> 
+                    <input class="btn-secondary" type="button" id="taux23" value="Taux % 23" onclick="managerSalary('autre')">
+                    <input class="btn-secondary" type="button" id="mois" value="Mois 12" > 
+                    <input class="btn-secondary" type="button" id="heures" value="Heures 35"></td>
+              </tr>
+              <!-- ---------------------------------------------------Radios------------------------------------------------------------- -->
+
+        <div class="mb-3">
+            <div class="form-check">
+              <tr class="statut">
+                <td class="p-3">Statut</td>
+
+                <td class="p-3"><label class="form-check-label px-3">Cadre <input type="radio" id="cadre" value="cadre" name="statut" class="form-check-input" onclick="managerSalary('cadre');" ></label> 
+                    <label class="form-check-label px-3">Fonctionnaire <input type="radio" id="fonc" value="fonc" name="statut" class="form-check-input" onclick="managerSalary('fonc');"></label>  
+                    <label class="form-check-label px-3">Portage <input type="radio" id="port" value="port" name="statut" class="form-check-input" onclick="managerSalary('port')"> </label> 
+                    <label class="form-check-label px-3">Indépendant /Société <input type="radio" id="indep" value="indep" name="statut" class="form-check-input" onclick="managerSalary('indep')"></label>  
+                    <label class="form-check-label px-3">Auto-Entrepreneur <input type="radio" id="auto" value="auto" name="statut" class="form-check-input" onclick="managerSalary('auto')"></label>  </td>
+              </tr>
+
+            </div>
+            </table>
+         
+                 <textarea class="form-control-lg mx-5" name="affich" id="affich" cols="100" rows="3" placeholder="Cliquez sur n'importe quel nombre pour calculer votre salaire " ></textarea>
+            
+            </fieldset>
+               </div>
+                   <!--  <div class="mx-5"> -->
+
+    
+           
+       
+                            <!-- </div> -->
+
+        </form>
+
+ 
+
+        <!-- </div> --> 
+
+        <!-- </div> -->
+
+    </div>
+
+</body>
+</html>
