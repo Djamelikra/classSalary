@@ -1,0 +1,2 @@
+# classSalary
+js object
